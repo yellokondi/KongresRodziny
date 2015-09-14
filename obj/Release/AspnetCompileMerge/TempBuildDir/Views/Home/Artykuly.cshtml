@@ -1,0 +1,19 @@
+﻿@model IEnumerable<KongresRodziny2015.Models.Article>
+
+@{
+    ViewBag.Title = "Artykuly";
+}
+
+<h2>Artykuły</h2>
+<div id="content-placeholder" class="container" style="margin-top:20px;margin-bottom:20px;"></div>
+
+<script type="text/javascript">
+    var url = '/home/GetJSONArticles';
+
+    $(document).ready(function () {
+        var jsonData = getContextData();
+        var context = $.parseJSON(jsonData);
+        var html = Handlebars.templates['article'](context);
+        $("#content-placeholder").html(html);
+    })
+</script>

@@ -1,0 +1,153 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/handlebars")
+    @Html.Partial("_html5shiv")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div class="navbar-wrapper">
+        <div class="container">
+            <!-- Navigation -->
+            <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="http://www.familycongresschicago.org" class="navbar-brand"><span class="flag-icon flag-icon-us"></span> US</a>
+                    <a href="@Url.Action("Index", "Home")" class="navbar-brand"><i class="fa fa-fw fa-home"></i> Strona Główna</a>
+                </div>
+                <!-- Top menu items -->
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <!-- Misja -->
+                        <li class="@HelperView.ActiveItem("Misja", "Home", null)">
+                            <a href="@Url.Action("Misja", "Home")"><i class="fa fa-fw fa-question-circle"></i> Misja</a>
+                        </li>
+                        <!-- Program dropdown -->
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-fw fa-arrows-v"></i> Program <i class="fa fa-fw fa-caret-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li class="@HelperView.ActiveItem("Program", "Home", null)">
+                                    <a href="@Url.Action("Program","Home")"><i class="fa fa-fw fa-newspaper-o"></i> Główny Program</a>
+                                </li>
+                                <li class="@HelperView.ActiveItem("Uczestnicy", "Home", null)">
+                                    <a href="@Url.Action("Uczestnicy", "Home")"><i class="fa fa-fw fa-users"></i> Mówcy/Uczestnicy</a>
+                                </li>
+                                <li class="@HelperView.ActiveItem("Miejsca", "Home", null)">
+                                    <a href="@Url.Action("Miejsca", "Home")"><i class="fa fa-fw fa-info-circle"></i> Miejsca</a>
+                                </li>
+                                <li class="@HelperView.ActiveItem("Modlitwa", "Home", null)">
+                                    <a href="@Url.Action("Modlitwa", "Home")"><i class="fa fa-fw fa-info-circle"></i> Modlitwa</a>
+                                </li>
+                                <li class="@HelperView.ActiveItem("Rekolekcje", "Home", null)">
+                                    <a href="@Url.Action("Rekolekcje", "Home")"><i class="fa fa-fw fa-info-circle"></i> Rekolekcje</a>
+                                </li>
+                                <li class="@HelperView.ActiveItem("Sympozjum", "Home", null)">
+                                    <a href="@Url.Action("Sympozjum", "Home")"><i class="fa fa-fw fa-info-circle"></i> Sympozjum</a>
+                                </li>
+                                <li class="@HelperView.ActiveItem("Konferencje", "Home", null)">
+                                    <a href="@Url.Action("Konferencje", "Home")"><i class="fa fa-fw fa-info-circle"></i> Konferencje</a>
+                                </li>
+                                <li class="@HelperView.ActiveItem("Kultura", "Home", null)">
+                                    <a href="@Url.Action("Kultura", "Home")"><i class="fa fa-fw fa-info-circle"></i> Kultura</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- Download -->
+                        <li class="@HelperView.ActiveItem("Downloads", "Home", null)">
+                            <a href="@Url.Action("Downloads", "Home")"><i class="fa fa-fw fa-download"></i> Downloads</a>
+                        </li>
+                        <!-- Artykuły -->
+                        <li class="@HelperView.ActiveItem("Artykuly", "Home", null)">
+                            <a href="@Url.Action("Artykuly", "Home")"><i class="fa fa-fw fa-newspaper-o"></i> Artykuły</a>
+                        </li>
+                        <!-- Kontakt -->
+                        <li class="@HelperView.ActiveItem("Kontakt", "Home", null)">
+                            <a href="@Url.Action("Kontakt", "Home")"><i class="fa fa-fw fa-info"></i> Kontakt</a>
+                        </li>
+                        <!-- Sponsorzy -->
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-fw fa-arrows-v"></i> Sponsorzy <i class="fa fa-fw fa-caret-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li class="@HelperView.ActiveItem("Sponsorzy", "Home", null)">
+                                    <a href="@Url.Action("Sponsorzy", "Home")"><i class="fa fa-fw fa-money"></i> Sponsorzy</a>
+                                </li>
+                                <li class="@HelperView.ActiveItem("PatronatMedialny", "Home", null)">
+                                    <a href="@Url.Action("PatronatMedialny", "Home")"><i class="fa fa-fw fa-ticket"></i> Patronat Medialny</a>
+                                </li>
+                                <li class="@HelperView.ActiveItem("Wspolpraca", "Home", null)">
+                                    <a href="@Url.Action("Wspolpraca", "Home")"><i class="fa fa-fw fa-cogs"></i> Współpraca</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    @Html.Partial("_carousel")
+
+    <div id="page-wrapper">
+        <div class="container-fluid">
+            @RenderBody()
+            <hr />
+            <footer>
+                <p>&copy; @DateTime.Now.Year - Kongres Rodziny</p>
+            </footer>
+        </div>
+    </div>
+
+    @RenderSection("scripts", required: false)
+
+    <script type="text/javascript">
+
+        function getContextData() {
+            var data;
+            $.ajax({
+                url: url,
+                async: false,
+                success: function (jsonData) {
+                    data = jsonData;
+                }
+            });
+            return data;
+        };
+
+        $(document).ready(function () {
+            $('#myCarousel').carousel({
+                interval: 6000
+            });
+
+            var clickEvent = false;
+            $('#myCarousel').on('click', '.nav a', function () {
+                clickEvent = true;
+                $('.nav li').removeClass('active');
+                $(this).parent().addClass('active');
+            }).on('slid.bs.carousel', function (e) {
+                if (!clickEvent) {
+                    var count = $('.nav.nav-pills.nav-justified').children().length - 1;
+                    var current = $('.nav li.active');
+                    current.removeClass('active').next().addClass('active');
+                    var id = parseInt(current.data('slide-to'));
+                    if (count == id) {
+                        $('.nav li').first().addClass('active');
+                    }
+                }
+                clickEvent = false;
+            });
+        });
+    </script>
+</body>
+</html>

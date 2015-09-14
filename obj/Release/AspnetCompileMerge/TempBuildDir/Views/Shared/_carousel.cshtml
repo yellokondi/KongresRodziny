@@ -1,0 +1,67 @@
+﻿<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+        <li data-target="#myCarousel" data-slide-to="3"></li>
+    </ol>
+    <div class="carousel-inner" role="listbox">
+        <div class="item active">
+            <div class="thumbnail">
+                <img src="~/Content/carousel_images/1-jom-02-15-14_3275_res.jpg" alt="Program" class="img-responsive carousel-image-container" />
+                <div class="container">
+                    <div class="carousel-caption">
+                        <h1>Sprawdź program Kongresu.</h1>
+                        <p>Znajdziesz tu cenne informacje dotyczące Kongresu - co, gdzie, kiedy, itp.</p>
+                        <p><a class="btn btn-lg btn-primary" href="@Url.Action("Program","Home")" role="button">Kliknij tutaj!</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="thumbnail">
+                <img src="~/Content/carousel_images/1-jom_02-27-2014_948_res.jpg" alt="Uczestnicy" class="img-responsive carousel-image-container" />
+                <div class="container">
+                    <div class="carousel-caption">
+                        <h1>Mówcy/Uczestnicy</h1>
+                        <p>Chcesz wiedzieć kto będzie brał udział w Kongresie?</p>
+                        <p><a class="btn btn-lg btn-primary" href="@Url.Action("Uczestnicy", "Home")" role="button">Sprawdź!</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="thumbnail">
+                <img src="~/Content/carousel_images/1-jom_03-01-2014_1143_res.jpg" alt="Misja" class="img-responsive carousel-image-container" />
+                <div class="container">
+                    <div class="carousel-caption">
+                        <h1>Misja</h1>
+                        <p>Zapoznaj się z główną ideą Kongresu Rodziny i dlaczego jest on istotnym dla Ciebie.</p>
+                        <p><a class="btn btn-lg btn-primary" href="@Url.Action("Misja","Home")" role="button">Czytaj tutaj!</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="thumbnail">
+                <img src="~/Content/carousel_images/1-jom_03-01-2014_1185_res.jpg" alt="Miejsca" class="img-responsive carousel-image-container" />
+                <div class="container">
+                    <div class="carousel-caption">
+                        <h1>Miejsca</h1>
+                        <p>Miejsca, w których będą się odbywać różne zajęcia, modlitwy, itp. związane z Kongresem.</p>
+                        <p><a class="btn btn-lg btn-primary" href="@Url.Action("Miejsca","Home")" role="button">Sprawdź tutaj!</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div><!-- End Carousel -->
