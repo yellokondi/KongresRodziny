@@ -144,3 +144,21 @@ N'Rozpoczęły się pierwsze nabożeństwa w ramach Drugiego Polonijnego Kongres
 GETUTCDATE(),
 NULL,
 NULL)
+
+INSERT INTO Articles(Title, ImageURI, [FullText], CreatedOn)
+VALUES(N'Małżeństwo z Poznania, Jadwiga i Jacek Pulikowscy zostali mianowani przez Franciszka audytorami synodu o rodzinie.','/Content/article_images/pulikowscy.png',
+N'W Watykanie opublikowano dziś pełną listę XIV Zgromadzenia Ogólnego Synodu Biskupów, który w dniach 4-25 października będzie obradował na temat "Powołania i misji rodziny w Kościele i świecie współczesnym".<br /><br />
+W dokumencie przypomniano, że obradom będzie przewodniczył Ojciec Święty, Franciszek, zaś przewodniczącymi delegowanymi będą kardynałowie. André Vingt-Trois z Paryża, Luis Antonio G. Tagle z Manili (Filipiny), Raymundo Damasceno Assis z Aparecidy (Brazylia) oraz Wilfrid Fox Napier OFM z Durbanu w RPA. Sekretarzem generalnym jest kard. Lorenzo Baldisseri, relatorem generalnym kard. Péter Erdő z Budapesztu, zaś sekretarzem specjalnym Włoch - abp Bruno Forte.<br /><br />
+Episkopat Polski reprezentować będą arcybiskupi Stanisław Gądecki i Henryk Hoser oraz bp Jan Wątroba. Jako przewodniczący dykasterii Kurii Rzymskiej - kard. Stanisław Ryłko oraz abp Zygmunt Zimowski.<br /><br />
+Obecni też będą biskupi polskiego pochodzenia z innych krajów: abp Mieczysław Mokrzycki ze Lwowa, abp Tadeusz Kondrusiewicz z Mińska, abp Zbigniew Stankiewicz ze stolicy Łotwy - Rygi, abp Tomasz Peta ze stolicy Kazachstanu - Astany oraz bp Krzysztof Białasik z Boliwii.<br /><br />
+W gronie audytorów znajdą się natomiast wspomniani już państwo Jadwiga i Jacek Pulikowscy z Poznania.',
+GETUTCDATE())
+
+INSERT INTO Blogs(Title, ImageURI, Slug, UserName, FullArticleURL, CreatedOn, Comments, Shares)
+VALUES(N'Małżeństwo z Poznania, Jadwiga i Jacek Pulikowscy zostali mianowani przez Franciszka audytorami synodu o rodzinie.','/Content/article_images/pulikowscy.png',
+N'W Watykanie opublikowano dziś pełną listę XIV Zgromadzenia Ogólnego Synodu Biskupów, który w dniach 4-25 października będzie obradował na temat "Powołania i misji rodziny w Kościele i świecie współczesnym".',
+'Jerzy',
+'Home/Artykul?id=1003',
+GETUTCDATE(),
+NULL,
+NULL)
