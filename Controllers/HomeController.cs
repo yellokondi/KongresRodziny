@@ -229,6 +229,30 @@ WHERE bt.BlogID = {0}";
 
 			return jsonData.Data.ToString();
 		}
+
+		public String GetJSONConferences()
+		{
+			List<Conference> conferences = SqlFuDAL.FindObjectsByType<Conference>();
+			ConferenceCollection conferenceCol = new ConferenceCollection();
+			conferenceCol.Conferences = conferences;
+
+			String json = JsonConvert.SerializeObject(conferenceCol);
+			JsonResult jsonData = new JsonResult { Data = JsonConvert.DeserializeObject(json) };
+
+			return jsonData.Data.ToString();
+		}
+
+		public String GetJSONCooperators(String type)
+		{
+			List<Cooperator> cooperators = SqlFuDAL.FindCooperatorsByType(type);
+			CooperatorCollection cooperatorCol = new CooperatorCollection();
+			cooperatorCol.Cooperators = cooperators;
+
+			String json = JsonConvert.SerializeObject(cooperatorCol);
+			JsonResult jsonData = new JsonResult { Data = JsonConvert.DeserializeObject(json) };
+
+			return jsonData.Data.ToString();
+		}
 		#endregion
 
 		public ActionResult FindBlogs(string tags)
