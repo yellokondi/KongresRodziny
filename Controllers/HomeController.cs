@@ -121,8 +121,18 @@ namespace KongresRodziny2015.Controllers
 			return View();
 		}
 
-		public ActionResult Warsztaty()
+		public ActionResult Rejestracja(String labName)
 		{
+			ViewBag.LabName = labName;
+			return View();
+		}
+
+		public ActionResult Warsztaty(String labName, String subject, String instructor)
+		{
+			ViewBag.LabName = labName;
+			ViewBag.Subject = subject;
+			ViewBag.Instructor = instructor;
+
 			return View();
 		}
 		public ActionResult Sympozjum()
@@ -256,6 +266,14 @@ WHERE bt.BlogID = {0}";
 			JsonResult jsonData = new JsonResult { Data = JsonConvert.DeserializeObject(json) };
 
 			return jsonData.Data.ToString();
+		}
+
+		public String GetJSONWorkshop(String labName)
+		{
+			Workshop workshop = SqlFuDAL.FindWorkshopByLabName(labName);
+			String json = JsonConvert.SerializeObject(workshop);
+			JsonResult jsonData = new JsonResult { Data = JsonConvert.DeserializeObject(json) };
+			return jsonData.Data.ToString();			
 		}
 		#endregion
 

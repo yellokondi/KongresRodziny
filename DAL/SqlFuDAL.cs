@@ -139,6 +139,18 @@ WHERE bt.BlogID = {0}";
 			return retVal;
 		}
 
+		internal static Workshop FindWorkshopByLabName(String name)
+		{
+			Workshop retVal = null;
+			string connection = System.Configuration.ConfigurationManager.ConnectionStrings["DBContext"].ConnectionString;
+			SqlFuDao.ConnectionStringIs(connection, DbEngine.SqlServer);
+			using (DbConnection db = SqlFuDao.GetConnection())
+			{
+				retVal = db.Query<Workshop>(w => w.Name == name).FirstOrDefault();
+			}
+			return retVal;
+		}
+
 		internal static Article FindArticleById(int id)
 		{
 			Article retVal = new Article();

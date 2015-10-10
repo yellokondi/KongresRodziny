@@ -27,6 +27,9 @@ namespace KongresRodziny2015
                 "~/Scripts/handlebars.runtime.min.js",
                 "~/Templates/Precompiled/templates.js"));
 
+            bundles.Add(new ScriptBundle("~/bundles/rejestracja").Include(
+                "~/Scripts/rejestracja.js"));
+
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/font-awesome.min.css",
@@ -34,7 +37,8 @@ namespace KongresRodziny2015
                       "~/Content/topnav.css",
                       "~/Content/flag-icon.css",
                       "~/Content/blog.css",
-                      "~/Content/logo.css"));
+                      "~/Content/logo.css",
+                      "~/Content/colorgraph.css"));
         }
     }
 }
