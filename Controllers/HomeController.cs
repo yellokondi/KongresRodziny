@@ -121,6 +121,10 @@ namespace KongresRodziny2015.Controllers
 			return View();
 		}
 
+		public ActionResult Warsztaty()
+		{
+			return View();
+		}
 		public ActionResult Sympozjum()
 		{
 			return View();
