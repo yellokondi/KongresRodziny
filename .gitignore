@@ -1,0 +1,4 @@
+#ignore some common folders:
+bin/
+obj/
+packages/
