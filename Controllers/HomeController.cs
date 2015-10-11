@@ -9,6 +9,8 @@ using Newtonsoft.Json;
 using DropNet;
 using DropNet.Models;
 using DropNet.Exceptions;
+using System.Net;
+using System.Net.Mail;
 
 namespace KongresRodziny2015.Controllers
 {
@@ -124,6 +126,48 @@ namespace KongresRodziny2015.Controllers
 		public ActionResult Rejestracja(String labName)
 		{
 			ViewBag.LabName = labName;
+			return View();
+		}
+
+		[HttpPost]
+		[ValidateAntiForgeryToken]
+		public ActionResult Rejestracja(RegistrationForm model)
+		{
+			if (ModelState.IsValid)
+			{
+				var body = @"<p>Workshop Title: {0}</p>
+<p>First Name: {1}</p>
+<p>Last Name: {2}</p>
+<p>Email Address: {3}</p>
+<p>Telephone Number: {4}</p>";
+
+				var message = new MailMessage();
+				message.To.Add(new MailAddress("info@kongresrodzinychicago.org"));
+				message.From = new MailAddress("web@kongresrodzinychicago.org");
+				message.Subject = String.Format("{0} {1} wants to register for: {2}.", model.FirstName, model.LastName, model.LabName);
+				message.Body = String.Format(body, model.LabName, model.FirstName, model.LastName, model.Email, model.Telephone);
+				message.IsBodyHtml = true;
+
+				using (var smtp = new SmtpClient())
+				{
+					var credential = new NetworkCredential
+					{
+						UserName = "web@kongresrodzinychicago.org",
+						Password = "mikonik44"
+					};
+					smtp.Credentials = credential;
+					smtp.Host = "smtp.kongresrodzinychicago.org";
+					smtp.Port = 587;
+					smtp.EnableSsl = false;
+					smtp.Send(message);
+					return RedirectToAction("Sent");
+				}
+			}
+			return View(model);
+		}
+
+		public ActionResult Sent()
+		{
 			return View();
 		}
 
