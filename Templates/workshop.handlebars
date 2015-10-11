@@ -1,0 +1,31 @@
+﻿<div class="container">
+	<h2>{{Subject}}</h2>
+	<h3>{{Instructor}}</h3>
+	<div>
+		<div class="row">
+			<div>
+				<h4>Miejsce:</h4>
+				<p>{{{Place}}}</p><br />
+				<h4>Termin</h4>
+				<p>{{{MeetOn}}}</p><br />
+				<h4>Prezentacja warsztatów</h4>
+				<p>{{{Definition}}}</p><br />
+				<h4>Cel warsztatów i do kogo skierowane</h4>
+				<p>
+					{{{Description}}}
+				</p><br />
+				<h4>Zasady uczestnictwa</h4>
+				<p>
+					{{{Rules}}}
+				</p><br />
+				<h4>Pomoce</h4>
+				<p>
+					{{{Help}}}
+				</p><br />
+				{{#if RegisterUrl}}
+				<a href="{{RegisterUrl}}" class="btn btn-lg btn-primary">Wpisz się</a>
+				{{/if}}
+			</div>
+		</div>
+	</div>
+</div>
