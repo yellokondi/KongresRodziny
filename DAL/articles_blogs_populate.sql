@@ -162,3 +162,44 @@ N'W Watykanie opublikowano dziś pełną listę XIV Zgromadzenia Ogólnego Synod
 GETUTCDATE(),
 NULL,
 NULL)
+
+--Kongres III - Artykuly
+INSERT INTO Articles(Title, ImageURI, [FullText], CreatedOn)
+VALUES(N'Press Release', '/Content/article_images/press_release_III.jpg',
+N'Od 19 – 22 listopada 2015r. odbędzie się Trzeci Polonijny Kongres Rodziny w Chicago: czas poświęcony spotkaniom warsztatowym, konferencjom i nabożeństwom. Zaproszenie do udziału skierowane jest do osób z rodzin zarówno wielo- jak i jednoosobowych, szczęśliwie prosperujących jak również tych, którzy przeżywają trudności czy kryzysy.
+<br /><br />
+Podejmowana będzie refleksja i modlitwa wokół  tematu: Zranieni  – uzdrowieni w miłości. Organizatorzy mają nadzieję, że wiele osób zaproponuje swoje czynne uczestnictwo w tych spotkaniach modlitewnych i warsztatach, oraz wierzą, że Bóg, który jest MIŁOŚCIĄ przyjdzie z pomocą  wszystkim, którzy w relacji do miłości poczuli się zranieni, przegrani, winni.
+<br /><br />
+Miłość jest wielkim darem Boga dla człowieka. Dzięki miłości życie rozkwita. Brak miłości lub jej zranienie powodują  zaburzenia rozwoju, są  przyczyną  nieszczęścia i niszczą  relacje międzyosobowe. Miłość dobrze przeżywana stanowi podstawę leczenia z różnego typu zranień. Miłość jest doświadczeniem psychicznym i duchowym zarazem, a jej obecność lub brak obecności, przeżywamy także w ciele. Dlatego można powiedzieć, że miłość obecna w życiu człowieka przenika całą  jego egzystencję i przyczynia się do wszechstronnego rozwoju. Jej brak lub zranienie ma także konsekwencje we wszystkich sferach ludzkiego życia.
+<br /><br />
+Kongres jest organizowany z inicjatywy świeckich członków fundacji Strong Family / Silna Rodzina pod patronatem Arcybiskupa Chicago Blase J. Cupich, przy współpracy z Dyrektorem Wykonawczym Ligi Katolickiej Pomocy Religijnej Polsce i Polonii – biskupem Andrzejem P. Wypych oraz z Delegatem Arcybiskupa do spraw Polonii – ks. Robertem Fedek. Opiekunem duchowym tego pięknego przedsięwzięcia jest ojciec Jerzy Karpiński. W organizację wydarzeń kongresowych zaangażowani są  wolontariusze, szczególnie ze Wspólnoty Trudnych Małżeństw SYCHAR, Domowego Kościoła oraz Biuro Duszpasterstwa Rodzin Archidiecezji.
+<br /><br />
+Program Kongresu został opracowany tak, aby każdy mógł znaleźć coś, co szczególnie do niego przemówi w modlitewnych nabożeństwach, konferencjach, warsztatach.
+<br /><br />
+Prezentacje odbędą się głównie w języku polskim, ale będą  również po angielsku.
+<br /><br />
+Do Kongresu zostali zaproszeni cenieni specjaliści w swoich dziedzinach. Głównym mówcą  jest ks. Prof. Romuald Jaworski, z Polski. Prezenterami będą  (w porządku alfabetycznym): o. Paweł Bandurski, Halina i Jerzy Florczyk, s. Maksymiliana Kamińska, o. Piotr Kochanowicz, Robert Lawler, Małgorzata Olczak, o. Tomasz Oleniacz, ks. Piotr Samborski, Kamila Smyk-Jaworska, o. Paweł Witon, ks. Michał Wyrzykowski.
+<br /><br />
+Ewa Kozioł<br />
+Animator Kongresu',
+GETUTCDATE())
+
+INSERT INTO Blogs(Title, ImageURI, Slug, UserName, FullArticleURL, CreatedOn, Comments, Shares)
+VALUES(N'Press Release', '/Content/article_images/press_release_III.jpg',
+N'Od 19 – 22 listopada 2015r. odbędzie się Trzeci Polonijny Kongres Rodziny w Chicago: czas poświęcony spotkaniom warsztatowym, konferencjom i nabożeństwom. 
+<br /><br />
+Zaproszenie do udziału skierowane jest do osób z rodzin zarówno wielo- jak i jednoosobowych, szczęśliwie prosperujących jak również tych, którzy przeżywają trudności czy kryzysy.
+<br /><br />
+Podejmowana będzie refleksja i modlitwa wokół tematu: Zranieni  – uzdrowieni w miłości.
+<br /><br />
+Kongres jest organizowany z inicjatywy świeckich członków fundacji Strong Family / Silna Rodzina pod patronatem Arcybiskupa Chicago Blase J. Cupich. 
+<br /><br />
+Prezentacje odbędą się głównie w języku polskim, ale będą również po angielsku. 
+<br /><br />
+Ewa Kozioł<br />
+Animator Kongresu',
+'Jerzy',
+'Home/Artykul?id=2002',
+GETUTCDATE(),
+NULL,
+NULL)
