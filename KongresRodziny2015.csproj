@@ -146,6 +146,7 @@
     <Compile Include="Models\Participant.cs" />
     <Compile Include="Models\ParticipantCollection.cs" />
     <Compile Include="Models\PostCollection.cs" />
+    <Compile Include="Models\RegistrationForm.cs" />
     <Compile Include="Models\Tag.cs" />
     <Compile Include="Models\Workshop.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -840,6 +841,7 @@
     <Content Include="Views\Home\Warsztaty.cshtml" />
     <Content Include="Views\Home\Rejestracja.cshtml" />
     <Content Include="Templates\workshop.handlebars" />
+    <Content Include="Views\Home\Sent.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
