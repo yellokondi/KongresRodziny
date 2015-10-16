@@ -73,9 +73,18 @@ namespace KongresRodziny2015.Controllers
 
 		public ActionResult Kontakt()
 		{
-			ViewBag.Message = "Your contact page.";
-
 			return View();
+		}
+
+		[HttpPost]
+		[ValidateAntiForgeryToken]
+		public ActionResult Kontakt(ContactUs model)
+		{
+			if (ModelState.IsValid)
+			{
+				SendFeedback(model);
+			}
+			return View(model);
 		}
 
 		public ActionResult Sponsorzy()
@@ -135,33 +144,7 @@ namespace KongresRodziny2015.Controllers
 		{
 			if (ModelState.IsValid)
 			{
-				var body = @"<p>Workshop Title: {0}</p>
-<p>First Name: {1}</p>
-<p>Last Name: {2}</p>
-<p>Email Address: {3}</p>
-<p>Telephone Number: {4}</p>";
-
-				var message = new MailMessage();
-				message.To.Add(new MailAddress("info@kongresrodzinychicago.org"));
-				message.From = new MailAddress("web@kongresrodzinychicago.org");
-				message.Subject = String.Format("{0} {1} wants to register for: {2}.", model.FirstName, model.LastName, model.LabName);
-				message.Body = String.Format(body, model.LabName, model.FirstName, model.LastName, model.Email, model.Telephone);
-				message.IsBodyHtml = true;
-
-				using (var smtp = new SmtpClient())
-				{
-					var credential = new NetworkCredential
-					{
-						UserName = "web@kongresrodzinychicago.org",
-						Password = "mikonik44"
-					};
-					smtp.Credentials = credential;
-					smtp.Host = "smtp.kongresrodzinychicago.org";
-					smtp.Port = 587;
-					smtp.EnableSsl = false;
-					smtp.Send(message);
-					return RedirectToAction("Sent");
-				}
+				SendRegistratioMessage(model);
 			}
 			return View(model);
 		}
@@ -338,5 +321,69 @@ WHERE bt.BlogID = {0}";
 			}
 			return View(blogs);
 		}
+
+		#region Send Message Methods
+		private RedirectToRouteResult SendRegistratioMessage(RegistrationForm model)
+		{
+			var body = @"<p>Workshop Title: {0}</p>
+<p>First Name: {1}</p>
+<p>Last Name: {2}</p>
+<p>Email Address: {3}</p>
+<p>Telephone Number: {4}</p>";
+
+			var message = new MailMessage();
+			message.To.Add(new MailAddress("info@kongresrodzinychicago.org"));
+			message.From = new MailAddress("web@kongresrodzinychicago.org");
+			message.Subject = String.Format("{0} {1} wants to register for: {2}.", model.FirstName, model.LastName, model.LabName);
+			message.Body = String.Format(body, model.LabName, model.FirstName, model.LastName, model.Email, model.Telephone);
+			message.IsBodyHtml = true;
+
+			using (var smtp = new SmtpClient())
+			{
+				var credential = new NetworkCredential
+				{
+					UserName = "web@kongresrodzinychicago.org",
+					Password = "mikonik44"
+				};
+				smtp.Credentials = credential;
+				smtp.Host = "smtp.kongresrodzinychicago.org";
+				smtp.Port = 587;
+				smtp.EnableSsl = false;
+				smtp.Send(message);
+				return RedirectToAction("Sent");
+			}
+		}
+
+		private RedirectToRouteResult SendFeedback(ContactUs model)
+		{
+			var body = @"<p>Feedback: {0}</p>
+<p>First Name: {1}</p>
+<p>Last Name: {2}</p>
+<p>Email Address: {3}</p>
+<p>Telephone Number: {4}</p>";
+
+			var message = new MailMessage();
+			message.To.Add(new MailAddress("info@kongresrodzinychicago.org"));
+			message.From = new MailAddress("web@kongresrodzinychicago.org");
+			message.Subject = String.Format("{0} {1} wants to sent a feedback", model.FirstName, model.LastName);
+			message.Body = String.Format(body, model.Comment, model.FirstName, model.LastName, model.Email, model.Telephone);
+			message.IsBodyHtml = true;
+
+			using (var smtp = new SmtpClient())
+			{
+				var credential = new NetworkCredential
+				{
+					UserName = "web@kongresrodzinychicago.org",
+					Password = "mikonik44"
+				};
+				smtp.Credentials = credential;
+				smtp.Host = "smtp.kongresrodzinychicago.org";
+				smtp.Port = 587;
+				smtp.EnableSsl = false;
+				smtp.Send(message);
+				return RedirectToAction("Sent");
+			}
+		}
+		#endregion
 	}
 }
