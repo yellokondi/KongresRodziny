@@ -192,7 +192,7 @@ INSERT INTO Participants(ParticipantName,ParticipantTitle,ParticipantBio,ImageUR
 VALUES(N'o. Paweł Witon', N'Jezuita',
 N'Z urodzenia Opolanin (1978), z powołania jezuita (wstąpienie 1997, święcenia kapłańskie 2011), z posłania student Loyola University (pastoral counseling) oraz opiekun Wspólnoty Jaśmin. 
 Przed przyjazdem pracowałem przez cztery lata we Wrocławiu jako nauczyciel, duszpasterz młodzieży (MAGIS), akademicki (DA DACH), post-akademicki (Wspólnota Desiderio), rodzin (Wspólnota Manna).',
-'',1)
+'/Content/uczestnicy/ksPawel_Witon_lo.jpg',1)
 
 INSERT INTO Participants(ParticipantName,ParticipantTitle,ParticipantBio,ImageURL,IsActive) 
 VALUES(N'Piotr Kochanowicz, SJ', N'Jezuita, terapeuta uzależnień',
@@ -208,7 +208,7 @@ N'Pochodząc z jezuickiej parafii w Nowym Sączu z Towarzystwem Jezusowym jestem
 Po drodze studia w Krakowie, Warszawie, Rzymie i Madrycie (studia z duchowości ignacjańskiej) i trzecia probacja w Dublinie. 
 Duszpastersko pracowałem najdłużej w domu rekolekcyjnym w Częstochowie, kilka lat byłem odpowiedzialny za formację duchową jezuickich kleryków w Krakowie, a ostatnie trzy lata spędziłem jako proboszcz w Gliwicach pod opiekuńczym okiem Matki Boskiej Kochawińskiej. 
 Rektor Sanktuarium i Superior jezuitów w Chicago od października 2014 roku.',
-'',1)
+'/Content/uczestnicy/oTomasz_Oleniacz_lo.jpg',1)
 
 INSERT INTO Participants(ParticipantName,ParticipantTitle,ParticipantBio,ImageURL,IsActive) 
 VALUES(N'Siostra Maksymiliana Kamińska', N'Psycholog i Terapeuta',

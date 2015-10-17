@@ -20,15 +20,13 @@ namespace KongresRodziny2015.Controllers
 		private static string DropBoxAccessToken = "U_IaYulTQ4YAAAAAAAACrwasLc3NcTLom1FnxpPZ1zE6I5hh_EFMTlTpzYd95TGH";
 		private static string DropBoxApiKey="srxkms5181bo1kj";
 		private static string DropBoxApiSecret = "9n2000p9utgrwx5";
-		//private static string UserSecret = "fMth1ku1lnBRsn3a";
-		//private static string UserToken = "XtlFq3zs8dnYK46F";
 		private DropNetClient _dropBoxClient = new DropNetClient(DropBoxApiKey, DropBoxApiSecret, DropBoxAccessToken);
 
 		private string DropBoxDownloadBasePath
 		{
 			get
 			{
-				return "KONGRES 2015/Download";
+				return "KONGRES 2015 listopad download/download - do pobrania";
 			}
 		}
 		#endregion
