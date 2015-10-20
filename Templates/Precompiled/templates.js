@@ -111,7 +111,9 @@ templates['post'] = template({"1":function(depth0,helpers,partials,data) {
 templates['profile'] = template({"1":function(depth0,helpers,partials,data) {
   var stack1, helper, functionType="function", helperMissing=helpers.helperMissing, escapeExpression=this.escapeExpression, buffer = "<div class=\"row panel\">\r\n    <div class=\"col-md-8 col-xs-12\">\r\n        <img src=\""
     + escapeExpression(((helper = (helper = helpers.ImageURL || (depth0 != null ? depth0.ImageURL : depth0)) != null ? helper : helperMissing),(typeof helper === functionType ? helper.call(depth0, {"name":"ImageURL","hash":{},"data":data}) : helper)))
-    + "\" class=\"img-thumbnail picture hidden-xs\" />\r\n        <div class=\"header\">\r\n            <h1>"
+    + "\" class=\"img-thumbnail picture hidden-xs\" />\r\n        <div class=\"header\">\r\n            <h1 id=\""
+    + escapeExpression(((helper = (helper = helpers.ParticipantName || (depth0 != null ? depth0.ParticipantName : depth0)) != null ? helper : helperMissing),(typeof helper === functionType ? helper.call(depth0, {"name":"ParticipantName","hash":{},"data":data}) : helper)))
+    + "\">"
     + escapeExpression(((helper = (helper = helpers.ParticipantName || (depth0 != null ? depth0.ParticipantName : depth0)) != null ? helper : helperMissing),(typeof helper === functionType ? helper.call(depth0, {"name":"ParticipantName","hash":{},"data":data}) : helper)))
     + "</h1>\r\n            <h4>"
     + escapeExpression(((helper = (helper = helpers.ParticipantTitle || (depth0 != null ? depth0.ParticipantTitle : depth0)) != null ? helper : helperMissing),(typeof helper === functionType ? helper.call(depth0, {"name":"ParticipantTitle","hash":{},"data":data}) : helper)))
@@ -133,9 +135,11 @@ templates['workshop'] = template({"1":function(depth0,helpers,partials,data) {
 },"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
   var stack1, helper, functionType="function", helperMissing=helpers.helperMissing, escapeExpression=this.escapeExpression, buffer = "﻿<div class=\"container\">\r\n	<h2>"
     + escapeExpression(((helper = (helper = helpers.Subject || (depth0 != null ? depth0.Subject : depth0)) != null ? helper : helperMissing),(typeof helper === functionType ? helper.call(depth0, {"name":"Subject","hash":{},"data":data}) : helper)))
-    + "</h2>\r\n	<h3>"
+    + "</h2>\r\n	<h3>\r\n		<a href=\"/Home/Uczestnicy#"
     + escapeExpression(((helper = (helper = helpers.Instructor || (depth0 != null ? depth0.Instructor : depth0)) != null ? helper : helperMissing),(typeof helper === functionType ? helper.call(depth0, {"name":"Instructor","hash":{},"data":data}) : helper)))
-    + "</h3>\r\n	<div>\r\n		<div class=\"row\">\r\n			<div>\r\n				<h4>Miejsce:</h4>\r\n				<p>";
+    + "\">"
+    + escapeExpression(((helper = (helper = helpers.Instructor || (depth0 != null ? depth0.Instructor : depth0)) != null ? helper : helperMissing),(typeof helper === functionType ? helper.call(depth0, {"name":"Instructor","hash":{},"data":data}) : helper)))
+    + "</a>\r\n	</h3>\r\n	<div>\r\n		<div class=\"row\">\r\n			<div>\r\n				<h4>Miejsce:</h4>\r\n				<p>";
   stack1 = ((helper = (helper = helpers.Place || (depth0 != null ? depth0.Place : depth0)) != null ? helper : helperMissing),(typeof helper === functionType ? helper.call(depth0, {"name":"Place","hash":{},"data":data}) : helper));
   if (stack1 != null) { buffer += stack1; }
   buffer += "</p><br />\r\n				<h4>Termin</h4>\r\n				<p>";
