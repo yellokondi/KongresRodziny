@@ -9,9 +9,11 @@
 
   return "﻿<div class=\"container\">\r\n	<h2>"
     + alias3(((helper = (helper = helpers.Subject || (depth0 != null ? depth0.Subject : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"Subject","hash":{},"data":data}) : helper)))
-    + "</h2>\r\n	<h3>"
+    + "</h2>\r\n	<h3>\r\n		<a href=\"/Home/Uczestnicy#"
     + alias3(((helper = (helper = helpers.Instructor || (depth0 != null ? depth0.Instructor : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"Instructor","hash":{},"data":data}) : helper)))
-    + "</h3>\r\n	<div>\r\n		<div class=\"row\">\r\n			<div>\r\n				<h4>Miejsce:</h4>\r\n				<p>"
+    + "\">"
+    + alias3(((helper = (helper = helpers.Instructor || (depth0 != null ? depth0.Instructor : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"Instructor","hash":{},"data":data}) : helper)))
+    + "</a>\r\n	</h3>\r\n	<div>\r\n		<div class=\"row\">\r\n			<div>\r\n				<h4>Miejsce:</h4>\r\n				<p>"
     + ((stack1 = ((helper = (helper = helpers.Place || (depth0 != null ? depth0.Place : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"Place","hash":{},"data":data}) : helper))) != null ? stack1 : "")
     + "</p><br />\r\n				<h4>Termin</h4>\r\n				<p>"
     + ((stack1 = ((helper = (helper = helpers.MeetOn || (depth0 != null ? depth0.MeetOn : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"MeetOn","hash":{},"data":data}) : helper))) != null ? stack1 : "")
@@ -23,7 +25,7 @@
     + ((stack1 = ((helper = (helper = helpers.Rules || (depth0 != null ? depth0.Rules : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"Rules","hash":{},"data":data}) : helper))) != null ? stack1 : "")
     + "\r\n				</p><br />\r\n				<h4>Pomoce</h4>\r\n				<p>\r\n					"
     + ((stack1 = ((helper = (helper = helpers.Help || (depth0 != null ? depth0.Help : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"Help","hash":{},"data":data}) : helper))) != null ? stack1 : "")
-    + "\r\n				</p><br />\r\n"
+    + "\r\n				</p><br />\r\n				<form action=\"https://www.paypal.com/cgi-bin/webscr\" method=\"post\" target=\"_top\">\r\n					<input type=\"hidden\" name=\"cmd\" value=\"_s-xclick\">\r\n					<input type=\"hidden\" name=\"hosted_button_id\" value=\"EMNXM9UE5HXGW\">\r\n					<input type=\"image\" src=\"https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif\" border=\"0\" name=\"submit\" alt=\"PayPal - The safer, easier way to pay online!\">\r\n					<img alt=\"\" border=\"0\" src=\"https://www.paypalobjects.com/en_US/i/scr/pixel.gif\" width=\"1\" height=\"1\">\r\n				</form>\r\n"
     + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.RegisterUrl : depth0),{"name":"if","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
     + "			</div>\r\n		</div>\r\n	</div>\r\n</div>";
 },"useData":true});
