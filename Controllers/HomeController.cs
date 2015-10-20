@@ -174,7 +174,12 @@ namespace KongresRodziny2015.Controllers
 		{
 			return View();
 		}
-		
+
+		public ActionResult Donacja()
+		{
+			return View();
+		}
+
 		public ActionResult Artykuly()
 		{
 			List<Article> articles = SqlFuDAL.FindObjectsByType<Article>();
