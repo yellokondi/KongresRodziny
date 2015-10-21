@@ -4,6 +4,46 @@
 }
 
 <h2>Wspomóż Fundację "Strong Family", klikając poniższy klawisz.</h2>
+<h4>
+	@if (ViewBag.FromRegistration)
+	{
+		<ul>
+			<li>
+				Sugerowana donacja $30
+			</li>
+			<li>
+				Przyjacielska donacja $50
+			</li>
+			<li>
+				Sponsorska donacja ...
+			</li>
+			<li>
+				W przypadku warsztatów "Spotkania małżeńskie" - donacja $450 od pary
+			</li>
+			<li>
+				W przypadku warsztatów  "Zranieni - uzdrowieni w miłości" - donacja $60 od pary 
+			</li>
+			<li>
+				W przypadku warsztatów  "Blisko, nie za blisko... Jak naprawić i wzmocnić więzi między rodzicami i dziećmi?" - donacja $45 od osoby
+			</li>
+		</ul> 
+	}
+	else 
+	{
+		<ul>
+			<li>
+				Sugerowana donacja $30
+			</li>
+			<li>
+				Przyjacielska donacja $50
+			</li>
+			<li>
+				Sponsorska donacja ...
+			</li>
+		</ul> 
+	}
+	
+</h4>
 <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
 	<input type="hidden" name="cmd" value="_s-xclick">
 	<input type="hidden" name="hosted_button_id" value="EMNXM9UE5HXGW">

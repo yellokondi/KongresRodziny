@@ -80,7 +80,7 @@ namespace KongresRodziny2015.Controllers
 		{
 			if (ModelState.IsValid)
 			{
-				SendFeedback(model);
+				return SendFeedback(model);
 			}
 			return View(model);
 		}
@@ -142,7 +142,7 @@ namespace KongresRodziny2015.Controllers
 		{
 			if (ModelState.IsValid)
 			{
-				SendRegistratioMessage(model);
+				return SendRegistratioMessage(model);
 			}
 			return View(model);
 		}
@@ -175,8 +175,9 @@ namespace KongresRodziny2015.Controllers
 			return View();
 		}
 
-		public ActionResult Donacja()
+		public ActionResult Donacja(Boolean fromRegistration = false)
 		{
+			ViewBag.FromRegistration = fromRegistration;
 			return View();
 		}
 
@@ -353,7 +354,7 @@ WHERE bt.BlogID = {0}";
 				smtp.Port = 587;
 				smtp.EnableSsl = false;
 				smtp.Send(message);
-				return RedirectToAction("Sent");
+				return RedirectToAction("Donacja", "Home", new { FromRegistration = true });
 			}
 		}
 
