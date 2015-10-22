@@ -157,7 +157,7 @@ templates['workshop'] = template({"1":function(depth0,helpers,partials,data) {
   buffer += "\r\n				</p><br />\r\n				<h4>Pomoce</h4>\r\n				<p>\r\n					";
   stack1 = ((helper = (helper = helpers.Help || (depth0 != null ? depth0.Help : depth0)) != null ? helper : helperMissing),(typeof helper === functionType ? helper.call(depth0, {"name":"Help","hash":{},"data":data}) : helper));
   if (stack1 != null) { buffer += stack1; }
-  buffer += "\r\n				</p><br />\r\n				<form action=\"https://www.paypal.com/cgi-bin/webscr\" method=\"post\" target=\"_top\">\r\n					<input type=\"hidden\" name=\"cmd\" value=\"_s-xclick\">\r\n					<input type=\"hidden\" name=\"hosted_button_id\" value=\"EMNXM9UE5HXGW\">\r\n					<input type=\"image\" src=\"https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif\" border=\"0\" name=\"submit\" alt=\"PayPal - The safer, easier way to pay online!\">\r\n					<img alt=\"\" border=\"0\" src=\"https://www.paypalobjects.com/en_US/i/scr/pixel.gif\" width=\"1\" height=\"1\">\r\n				</form>\r\n";
+  buffer += "\r\n				</p><br />\r\n";
   stack1 = helpers['if'].call(depth0, (depth0 != null ? depth0.RegisterUrl : depth0), {"name":"if","hash":{},"fn":this.program(1, data),"inverse":this.noop,"data":data});
   if (stack1 != null) { buffer += stack1; }
   return buffer + "			</div>\r\n		</div>\r\n	</div>\r\n</div>";
