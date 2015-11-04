@@ -186,8 +186,10 @@
     <Content Include="Content\ads\sponsors\wiklanski_bakery.jpg" />
     <Content Include="Content\article_images\150106_press_release.jpg" />
     <Content Include="Content\article_images\150107_rozpoczecie_Kongresu.jpg" />
+    <Content Include="Content\article_images\polskie_radio_logo.png" />
     <Content Include="Content\article_images\press_release_III.jpg" />
     <Content Include="Content\article_images\pulikowscy.png" />
+    <Content Include="Content\article_images\rozne137.jpg" />
     <Content Include="Content\article_images\walenty_web.jpg" />
     <Content Include="Content\blog.css" />
     <Content Include="Content\bootstrap-theme.css" />

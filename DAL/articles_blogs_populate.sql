@@ -203,3 +203,143 @@ Animator Kongresu',
 GETUTCDATE(),
 NULL,
 NULL)
+
+INSERT INTO Articles(Title, ImageURI, [FullText], CreatedOn)
+VALUES(N'Wywiad z Ewą Kozioł w Polski.fm','/Content/article_images/rozne137.jpg',
+N'Ewa Kozioł, Animator Kongresu zaanonsowała Trzeci Polonijny Kongres Rodziny w wywiadzie, udzielonym Red. Bogdanowi Kwaśny, w radiostacji:<br /><br />
+Polski.fm  Chicago<br /><br />
+<a href="http://polski.fm/">polski.fm</a>',GETUTCDATE())
+
+INSERT INTO Blogs(Title, ImageURI, Slug, UserName, FullArticleURL, CreatedOn, Comments, Shares)
+VALUES(N'Wywiad z Ewą Kozioł w Polski.fm','/Content/article_images/rozne137.jpg',
+N'Ewa Kozioł, Animator Kongresu zaanonsowała Trzeci Polonijny Kongres Rodziny w wywiadzie, udzielonym Red. Bogdanowi Kwaśny, w radiostacji:<br /><br />
+Polski.fm  Chicago<br /><br />
+<a href="http://polski.fm/">polski.fm</a>',
+'Jerzy',
+'Home/Artykul?id=2003',
+GETUTCDATE(),
+NULL,
+NULL)
+
+INSERT INTO Articles(Title, ImageURI, [FullText], CreatedOn)
+VALUES(N'NOWY WYWIAD z ks. Romualdem Jaworskim','/Content/article_images/polskie_radio_logo.png',
+N'środa, 4 listopada 2015<br />
+w programia Idalii Błaszczyk <br />
+10am - 12am<br />
+CO SŁYCHAĆ<br />
+Idalia Błaszczyk<br />
+TEMAT: KONFLIKTY RODZINNE<br />
+Radio 1030AM Chicago i 910AM NY<br />
+Polskie Radio<br />
+<a href="http://www.polskieradio.com/ramowka.aspx">www.polskieradio.com</a>',GETUTCDATE())
+
+INSERT INTO Blogs(Title, ImageURI, Slug, UserName, FullArticleURL, CreatedOn, Comments, Shares)
+VALUES(N'NOWY WYWIAD z ks. Romualdem Jaworskim','/Content/article_images/polskie_radio_logo.png',
+N'środa, 4 listopada 2015<br />
+w programia Idalii Błaszczyk <br />
+10am - 12am<br />
+CO SŁYCHAĆ<br />
+Idalia Błaszczyk<br />
+TEMAT: KONFLIKTY RODZINNE<br />
+Radio 1030AM Chicago i 910AM NY<br />
+Polskie Radio<br />
+<a href="http://www.polskieradio.com/ramowka.aspx">www.polskieradio.com</a>',
+'Jerzy',
+'Home/Artykul?id=2004',
+GETUTCDATE(),
+NULL,
+NULL)
+
+INSERT INTO Articles(Title, ImageURI, [FullText], CreatedOn)
+VALUES(N'Rejestracja Na Warsztaty','/Content/default_blog_image/default_document.png',
+N'WARSZTATY: - Uwierzyć w siebie, o. Piotr Kochanowicz<br />
+<b style="color:red">LIMIT MIEJSC ZOSTAŁ WYCZERPANY. NIE PRZYJMUJEMY NOWYCH ZAPISÓW TAKŻE NA LISTĘ REZERWOWĄ</b>
+<br /><br />
+ZAPRASZAMY DO WZIĘCIA UDZIAŁU W INNYCH DOWOLNYCH WARSZTATACH, W KTÓRYCH SĄ WOLNE MIEJSCA
+<br /><br />
+REJESTRACJA NA WARSZTATY (liczba miejsc ograniczona) odbywa się w następujący sposób:<br />
+<ul>
+	<li>
+		drogą internetową: kliknąć wybrany temat warsztatów i wypełnić proponowane rubryki <a href="http://kongresrodzinychicago.org/Home/Program">Program Warsztatów</a>
+	</li>
+	<li>
+		osobiście: w biurze Jezuickiego Ośrodka Milenijnego (5835 W Irving Park Rd, Chicago), w dni powszednie od godz. 3:30pm do 8:30pm oraz w niedziele po każdej Mszy św.
+	</li>
+	<li>
+		za pośrednictwem mailowego kontaktu z organizatorami: <a href="mailto:info@kongresrodzinychicago.org">info@kongresrodzinychicago.org</a>
+	</li>
+</ul>
+Organizatorzy uprzejmie proszą o donację na konto fundacji Not-For-Profit: "Strong Family".<br />
+Organizatorzy zastrzegają sobie prawo odwołania warsztatów z przyczyn od nich niezależnych (wówczas wpłacone pieniądze zostaną zwrócone)<br />
+Jeśli racje finansowe są jedyną przeszkodą wzięcia udziału w którychkolwiek warsztatach, prośba o kontakt z organizatorami, a sprawa zostanie rozpatrzona indywidualnie <a href="mailto:info@kongresrodzinychicago.org">info@kongresrodzinychicago.org</a><br />
+Wspomóż Fundację "Strong Family", która jest głównym organizatorem i sponsorem różnych imprez, między innymi Polonijnych Kongresów Rodziny.<br />
+Strong Family jest organizacją charytatywno-religijną Non-For-Profit, zatem na końcu roku darczyńcy mogą otrzymać dokument potwierdzający donacje, który jest akceptowany przez IRS.<br />
+Złóż dowolną Donację!<br />
+Donacje można składać wypisując czek na "Strong Family" i wysyłając go na adres: Strong Family, 4105 N Avers Ave, Chicago, IL 60618<br />
+Można także płacić przelewem z karty kredytowej albo za pośrednictwem Pay-Pal. W tym celu należy kliknąć: Donate<br />
+W przypadku rejestracji na WYBRANE WARSZTATY (oprócz wymienionych poniżej) Fundacja "Strong Family" prosi o złożenie donacji:<br />
+donacja sugerowana: $ 30<br />
+donacja przyjacielska: $ 50<br />
+donacja sponsorska: ...<br />
+W przypadku warsztatów "Spotkania małżeńskie" - donacja $450 od pary bądź $200 zaliczki (pełna wpłata na miejscu przed rozpoczęciem).<br />
+W przypadku warsztatów "Zranieni - uzdrowieni w miłości" - donacja $60 od pary małżeńskiej<br />
+W przypadku warsztatów "Siedem sekretów efektywnego ojcowska" - donacja $80 od osoby.<br />
+Fundacja "Strong Family" dziękuje za wsparcie i chęć udziału w warsztatach Trzeciego Polonijnego Kongresu Rodziny.<br />
+Prosimy o cierpliwość, potwierdzenie rejestracji zostanie wkrótce odesłane na podanego emaila.<br />
+ZAPRASZAMY na warsztaty:<br />
+<ul>
+	<li>
+		Bibliodrama: Rodzina w Biblii – Biblia w rodzinie.
+	</li>
+	<li>
+		Jak kochać, gdy z oczu płyną łzy, czyli słów kilka o trudnej miłości.
+	</li>
+	<li>
+		Język miłości i szacunku – garść pomysłów na rozmowy z rodzicami, rodzeństwem ... i resztą świata.
+	</li>
+	<li>
+		Konflikty rodzinne (w świetle analizy transakcyjnej).
+	</li>
+	<li>
+		Siedem sekretów efektywnego ojcostwa.
+	</li>
+	<li>
+		Uwierzyć w siebie. <b style="color:red">LIMIT MIEJSC ZOSTAŁ WYCZERPANY. NIE PRZYJMUJEMY NOWYCH ZAPISÓW TAKŻE NA LISTĘ REZERWOWĄ</b>
+	</li>
+	<li>
+		Wounded yet healed by love. Combating the contraceptive mentality in modern society.
+	</li>
+	<li>
+		Zakazany smutek
+	</li>
+	<li>
+		Zranieni – uzdrowieni w miłości.
+	</li>
+</ul>
+Pełny program WARSZTATÓW i całego KONGRESU tutaj:<br />
+<a href="http://kongresrodzinychicago.org/Home/Program">Program Warsztatów</a>',GETUTCDATE())
+
+INSERT INTO Blogs(Title, ImageURI, Slug, UserName, FullArticleURL, CreatedOn, Comments, Shares)
+VALUES(N'Rejestracja Na Warsztaty','/Content/default_blog_image/default_document.png',
+N'WARSZTATY: - Uwierzyć w siebie, o. Piotr Kochanowicz<br />
+<b style="color:red">LIMIT MIEJSC ZOSTAŁ WYCZERPANY. NIE PRZYJMUJEMY NOWYCH ZAPISÓW TAKŻE NA LISTĘ REZERWOWĄ</b>
+<br /><br />
+ZAPRASZAMY DO WZIĘCIA UDZIAŁU W INNYCH DOWOLNYCH WARSZTATACH, W KTÓRYCH SĄ WOLNE MIEJSCA
+<br /><br />
+REJESTRACJA NA WARSZTATY (liczba miejsc ograniczona) odbywa się w następujący sposób:<br />
+<ul>
+	<li>
+		drogą internetową: kliknąć wybrany temat warsztatów i wypełnić proponowane rubryki <a href="http://kongresrodzinychicago.org/Home/Program">Program Warsztatów</a>
+	</li>
+	<li>
+		osobiście: w biurze Jezuickiego Ośrodka Milenijnego (5835 W Irving Park Rd, Chicago), w dni powszednie od godz. 3:30pm do 8:30pm oraz w niedziele po każdej Mszy św.
+	</li>
+	<li>
+		za pośrednictwem mailowego kontaktu z organizatorami: <a href="mailto:info@kongresrodzinychicago.org">info@kongresrodzinychicago.org</a>
+	</li>
+</ul>',
+'Jerzy',
+'Home/Artykul?id=2004',
+GETUTCDATE(),
+NULL,
+NULL)
