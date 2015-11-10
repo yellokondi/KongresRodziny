@@ -339,7 +339,30 @@ REJESTRACJA NA WARSZTATY (liczba miejsc ograniczona) odbywa się w następujący
 	</li>
 </ul>',
 'Jerzy',
-'Home/Artykul?id=2004',
+'Home/Artykul?id=2005',
+GETUTCDATE(),
+NULL,
+NULL)
+
+INSERT INTO Articles(Title, ImageURI, [FullText], CreatedOn)
+VALUES(N'WYWIAD z o. Jerzym Karpińskim','/Content/article_images/polskie_radio_logo.png',
+N'Piątek, 6 listopada 2015<br />
+w programie Bogdana Kwaśnego<br />
+Godzina 17:30<br />
+Radio 1030AM Chicago i 910AM NY<br />
+Polskie Radio<br />
+<a href="http://www.polskieradio.com/ramowka.aspx">www.polskieradio.com</a>',GETUTCDATE())
+
+INSERT INTO Blogs(Title, ImageURI, Slug, UserName, FullArticleURL, CreatedOn, Comments, Shares)
+VALUES(N'WYWIAD z o. Jerzym Karpińskim','/Content/article_images/polskie_radio_logo.png',
+N'Piątek, 6 listopada 2015<br />
+w programie Bogdana Kwaśnego<br />
+Godzina 17:30<br />
+Radio 1030AM Chicago i 910AM NY<br />
+Polskie Radio<br />
+<a href="http://www.polskieradio.com/ramowka.aspx">www.polskieradio.com</a>',
+'Jerzy',
+'Home/Artykul?id=',
 GETUTCDATE(),
 NULL,
 NULL)
