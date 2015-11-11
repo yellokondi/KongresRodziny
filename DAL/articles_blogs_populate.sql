@@ -366,3 +366,18 @@ Polskie Radio<br />
 GETUTCDATE(),
 NULL,
 NULL)
+
+INSERT INTO Articles(Title, ImageURI, [FullText], CreatedOn)
+VALUES(N'B. Kwaśny i cała ekipa - DZIĘKUJEMY!!!','/Content/default_blog_image/default_document.png',
+N'Polski.FM : Rzeczowe informacje, wywiady, rozmowy na temat Kongres Rodziny 19 - 22 Listopad 2015 Chicago. Dotychczas, na tydzień przed rozpoczęciem Kongresu, u Was było najwięcej! B. Kwaśny i cała ekipa - DZIĘKUJEMY!!! 
+<a href="http://polski.fm/">Polski.FM</a>, Chicago - 92.7FM i 99.9FM',GETUTCDATE())
+
+INSERT INTO Blogs(Title, ImageURI, Slug, UserName, FullArticleURL, CreatedOn, Comments, Shares)
+VALUES(N'B. Kwaśny i cała ekipa - DZIĘKUJEMY!!!','/Content/default_blog_image/default_document.png',
+N'Polski.FM : Rzeczowe informacje, wywiady, rozmowy na temat Kongres Rodziny 19 - 22 Listopad 2015 Chicago. Dotychczas, na tydzień przed rozpoczęciem Kongresu, u Was było najwięcej! B. Kwaśny i cała ekipa - DZIĘKUJEMY!!! 
+<a href="http://polski.fm/">Polski.FM</a>, Chicago - 92.7FM i 99.9FM',
+'Jerzy',
+'Home/Artykul?id=3003',
+GETUTCDATE(),
+NULL,
+NULL)
